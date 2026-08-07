@@ -1,5 +1,8 @@
 # Xcatcher Agent Skill
 
+[![skills.sh](https://img.shields.io/badge/skills.sh-xcatcher-58f29b)](https://skills.sh/lvpiggyqq/xcatcher-skill/xcatcher)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.lvpiggyqq%2Fxcatcher-58f29b)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.lvpiggyqq%2Fxcatcher)
+
 Install one Agent Skill that teaches Codex, Claude Code, Cursor, GitHub Copilot, Cline, and other compatible agents how to fetch recent public X (Twitter) posts by handle through Xcatcher.
 
 The Skill prefers the public Remote MCP endpoint, returns structured JSON, and supports accountless x402 v2 USDC pay-per-crawl on Base. It includes explicit payment approval, secret-handling, retry, polling, and prompt-injection boundaries.
@@ -39,6 +42,8 @@ Canonical sources and releases:
 ## What it enables
 
 - Monitor one or many named X accounts without treating keyword search as handle monitoring.
+- Preflight and deduplicate handles for free before creating any quote, task, or payment.
+- Inspect a clearly labeled synthetic result contract without fetching X.
 - Choose safely between accountless x402 and an existing Xcatcher API key.
 - Ask for approval before any wallet signature or spend.
 - Keep API keys, payment signatures, and task tokens in host-managed secret channels rather than prompts or shell history.
@@ -59,6 +64,8 @@ The installable Skill is in [`skills/xcatcher`](skills/xcatcher):
 Remote MCP: <https://xcatcher.top/mcp/>
 
 Documentation: <https://xcatcher.top/docs/>
+
+Trust center: <https://xcatcher.top/trust/>
 
 MCP Registry: <https://registry.modelcontextprotocol.io/v0.1/servers/io.github.lvpiggyqq%2Fxcatcher/versions/3.0.0>
 
