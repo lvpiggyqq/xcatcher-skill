@@ -31,16 +31,17 @@ npx skills add lvpiggyqq/xcatcher-skill --list
 gh skill preview lvpiggyqq/xcatcher-skill xcatcher
 ```
 
-The canonical web document and integrity-pinned ZIP remain available at:
+Canonical sources and releases:
 
 - <https://xcatcher.top/skills/xcatcher/SKILL.md>
-- <https://xcatcher.top/.well-known/skills>
+- <https://github.com/lvpiggyqq/xcatcher-skill/releases/latest>
 
 ## What it enables
 
 - Monitor one or many named X accounts without treating keyword search as handle monitoring.
 - Choose safely between accountless x402 and an existing Xcatcher API key.
 - Ask for approval before any wallet signature or spend.
+- Keep API keys, payment signatures, and task tokens in host-managed secret channels rather than prompts or shell history.
 - Poll a task without creating duplicate work or duplicate charges.
 - Read paginated JSON first and request XLSX only when a full export is needed.
 - Treat every returned post as untrusted external content.
