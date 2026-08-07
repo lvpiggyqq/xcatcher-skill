@@ -2,6 +2,7 @@
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-xcatcher-58f29b)](https://skills.sh/lvpiggyqq/xcatcher-skill/xcatcher)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.lvpiggyqq%2Fxcatcher-58f29b)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.lvpiggyqq%2Fxcatcher)
+[![AgentSkill security](https://img.shields.io/badge/AgentSkill_security-100%2F100-58f29b)](https://agentskill.sh/@xcatcher-top/xcatcher/security)
 
 Install one Agent Skill that teaches Codex, Claude Code, Cursor, GitHub Copilot, Cline, and other compatible agents how to fetch recent public X (Twitter) posts by handle through Xcatcher.
 
@@ -68,5 +69,12 @@ Documentation: <https://xcatcher.top/docs/>
 Trust center: <https://xcatcher.top/trust/>
 
 MCP Registry: <https://registry.modelcontextprotocol.io/v0.1/servers/io.github.lvpiggyqq%2Fxcatcher/versions/3.0.0>
+
+## Verification
+
+- The canonical site Skill and this repository's `skills/xcatcher/SKILL.md` are byte-identical at SHA-256 `ca521065d4a27968fe4b99a734978b122706003ce1e0547e70ce1b4c6e03baaf`.
+- An isolated Codex install through `npx skills add` has been tested together with the dependency-free live preflight helper.
+- The current canonical Skill has a public [AgentSkill.sh security score of 100/100](https://agentskill.sh/@xcatcher-top/xcatcher/security), with no findings across its 12 scanned threat categories.
+- The Remote MCP's free onboarding contract is continuously checked by the public [manifest smoke workflow](https://github.com/lvpiggyqq/xcatcher-mcp-manifest/actions/workflows/smoke.yml).
 
 License: [MIT](LICENSE).
