@@ -17,7 +17,7 @@ npx skills add lvpiggyqq/xcatcher-skill --skill xcatcher
 - Hosted read-only copy: `https://xcatcher.top/skills/xcatcher/SKILL.md`
 - Trust and data practices: `https://xcatcher.top/trust/`
 
-The standalone `SKILL.md` is enough to follow the Remote MCP workflow on a host that can connect to MCP servers. A persistent repository install also provides `agents/openai.yaml`, focused references, and the optional dependency-free REST helper. Do not download or execute an unverified archive just to use this Skill.
+The standalone `SKILL.md` is sufficient for the Remote MCP workflow. The public repository also documents companion metadata, focused references, and an optional dependency-free REST helper; inspect those files before choosing to use them. No archive is required.
 
 Prefer the Remote MCP at `https://xcatcher.top/mcp/`. It supports discovery and accountless x402 tools without an Xcatcher key. Use REST or `scripts/xcatcher.py` only when the host cannot connect to Remote MCP; run `scripts/xcatcher.py capabilities` first in that fallback path.
 
