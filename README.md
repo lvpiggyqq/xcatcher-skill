@@ -45,12 +45,6 @@ gemini extensions install https://github.com/lvpiggyqq/xcatcher-skill
 GitHub Copilot CLI / VS Code agent plugin:
 
 ```bash
-copilot plugin install lvpiggyqq/xcatcher-skill
-```
-
-To browse this repository as a Copilot plugin marketplace:
-
-```bash
 copilot plugin marketplace add lvpiggyqq/xcatcher-skill
 copilot plugin install xcatcher@xcatcher
 ```
@@ -74,6 +68,9 @@ Independent discovery pages may cache older metadata. The repository, canonical 
 - <https://skills.re/skills/lvpiggyqq/xcatcher-skill/xcatcher>
 - <https://agentskill.sh/@xcatcher-top/xcatcher>
 - <https://skills.sh/lvpiggyqq/xcatcher-skill/xcatcher>
+- <https://www.mcpserverspot.com/servers/xcatcher>
+- <https://mcpub.dev/>
+- <https://glama.ai/mcp/remote-servers/io.github.lvpiggyqq/xcatcher>
 
 ## What it enables
 
