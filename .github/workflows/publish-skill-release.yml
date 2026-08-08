@@ -47,12 +47,14 @@ jobs:
           skill_sha="$(sha256sum skills/xcatcher/SKILL.md | cut -d' ' -f1)"
           release_notes="$(printf '%s\n' \
             'Install with: npx skills add lvpiggyqq/xcatcher-skill --skill xcatcher' \
+            'Gemini CLI: gemini extensions install https://github.com/lvpiggyqq/xcatcher-skill' \
+            'GitHub Copilot CLI: copilot plugin install lvpiggyqq/xcatcher-skill' \
             '' \
             'Canonical Skill: https://xcatcher.top/SKILL.md' \
             'Remote MCP: https://xcatcher.top/mcp/' \
             "Skill SHA-256: $skill_sha" \
             '' \
-            'This release adds free preflight and synthetic sample workflows, current structured-JSON guidance, and guarded accountless x402 v2 payment boundaries. No wallet secret or payment signature belongs in model-visible context.')"
+            'This release adds validated distribution manifests for Gemini CLI, Agent Plugins/Kiro, GitHub Copilot/VS Code, Cursor, Codex, and Cline. The canonical Skill workflow is unchanged. No wallet secret or payment signature belongs in model-visible context.')"
           gh release create "$TAG" \
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
