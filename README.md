@@ -1,6 +1,7 @@
 # Xcatcher Agent Skill
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-xcatcher-58f29b)](https://skills.sh/lvpiggyqq/xcatcher-skill/xcatcher)
+[![skills.re](https://img.shields.io/badge/skills.re-xcatcher-58f29b)](https://skills.re/skills/lvpiggyqq/xcatcher-skill/xcatcher)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.lvpiggyqq%2Fxcatcher-58f29b)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.lvpiggyqq%2Fxcatcher)
 [![AgentSkill security](https://img.shields.io/badge/AgentSkill_security-100%2F100-58f29b)](https://agentskill.sh/@xcatcher-top/xcatcher/security)
 
@@ -39,6 +40,12 @@ Canonical sources and releases:
 
 - <https://xcatcher.top/skills/xcatcher/SKILL.md>
 - <https://github.com/lvpiggyqq/xcatcher-skill/releases/latest>
+
+Independent discovery pages may cache older metadata. The repository, canonical Skill, and live MCP tool schemas remain authoritative:
+
+- <https://skills.re/skills/lvpiggyqq/xcatcher-skill/xcatcher>
+- <https://agentskill.sh/@xcatcher-top/xcatcher>
+- <https://skills.sh/lvpiggyqq/xcatcher-skill/xcatcher>
 
 ## What it enables
 
