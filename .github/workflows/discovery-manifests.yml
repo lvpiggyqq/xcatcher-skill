@@ -29,5 +29,7 @@ jobs:
         run: python tests/validate_discovery.py
       - name: Validate Gemini CLI extension
         run: npx --yes @google/gemini-cli@0.54.4 extensions validate .
+      - name: Validate Claude Code plugin
+        run: npx --yes @anthropic-ai/claude-code@2.1.224 plugin validate .
       - name: Test free Remote MCP onboarding
         run: python tests/smoke_remote_mcp.py

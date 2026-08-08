@@ -50,6 +50,8 @@ def main() -> None:
     expected_json = (
         ".mcp.json",
         ".codex-plugin/plugin.json",
+        ".claude-plugin/plugin.json",
+        ".claude-plugin/marketplace.json",
         ".github/plugin/marketplace.json",
         "gemini-extension.json",
     )
