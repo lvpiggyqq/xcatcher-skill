@@ -1,0 +1,58 @@
+name: Publish Skill release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - VERSION
+      - .github/workflows/publish-skill-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate release inputs
+        id: release
+        shell: bash
+        run: |
+          version="$(tr -d '[:space:]' < VERSION)"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "VERSION must contain a semantic version" >&2
+            exit 1
+          fi
+          test -f skills/xcatcher/SKILL.md
+          grep -q '^name: xcatcher$' skills/xcatcher/SKILL.md
+          sha256sum skills/xcatcher/SKILL.md
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+
+      - name: Publish release if missing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.release.outputs.version }}
+          TAG: ${{ steps.release.outputs.tag }}
+        shell: bash
+        run: |
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "$TAG already exists; leaving it unchanged."
+            exit 0
+          fi
+          skill_sha="$(sha256sum skills/xcatcher/SKILL.md | cut -d' ' -f1)"
+          gh release create "$TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "Xcatcher Agent Skill $TAG" \
+            --notes "Install with: npx skills add lvpiggyqq/xcatcher-skill --skill xcatcher
+
+Canonical Skill: https://xcatcher.top/SKILL.md
+Remote MCP: https://xcatcher.top/mcp/
+Skill SHA-256: $skill_sha
+
+This release adds free preflight and synthetic sample workflows, current structured-JSON guidance, and guarded accountless x402 v2 payment boundaries. No wallet secret or payment signature belongs in model-visible context."
