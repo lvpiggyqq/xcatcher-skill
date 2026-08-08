@@ -1,0 +1,33 @@
+name: Validate discovery manifests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install manifest validator
+        run: python -m pip install --disable-pip-version-check jsonschema
+      - name: Validate platform manifests
+        run: python tests/validate_discovery.py
+      - name: Validate Gemini CLI extension
+        run: npx --yes @google/gemini-cli@0.54.4 extensions validate .
+      - name: Test free Remote MCP onboarding
+        run: python tests/smoke_remote_mcp.py

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "xcatcher": {
+      "type": "http",
+      "url": "https://xcatcher.top/mcp/"
+    }
+  }
+}

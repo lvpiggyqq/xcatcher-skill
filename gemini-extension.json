@@ -1,0 +1,11 @@
+{
+  "name": "xcatcher",
+  "version": "1.0.0",
+  "description": "Fetch recent public X/Twitter posts by handle with free preflight, structured results, and optional x402 access.",
+  "mcpServers": {
+    "xcatcher": {
+      "httpUrl": "https://xcatcher.top/mcp/",
+      "timeout": 300000
+    }
+  }
+}

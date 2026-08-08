@@ -1,0 +1,43 @@
+{
+  "name": "xcatcher",
+  "version": "1.0.0",
+  "description": "Fetch recent public X/Twitter posts by handle through a hosted Remote MCP, with safe free-first and x402 workflows.",
+  "author": {
+    "name": "Xcatcher",
+    "url": "https://xcatcher.top/"
+  },
+  "homepage": "https://xcatcher.top/integrations/agent-skills/",
+  "repository": "https://github.com/lvpiggyqq/xcatcher-skill",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "twitter",
+    "x-posts",
+    "social-intelligence",
+    "x402"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Xcatcher — Recent X Posts",
+    "shortDescription": "Fetch recent public X posts by handle",
+    "longDescription": "Preflight and fetch recent public X/Twitter posts from one or many named handles through Xcatcher's hosted Remote MCP. Inspect the result contract for free, then use an approved API-key or accountless x402 path for live crawls.",
+    "developerName": "Xcatcher",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Remote MCP",
+      "Structured data"
+    ],
+    "websiteURL": "https://xcatcher.top/",
+    "privacyPolicyURL": "https://xcatcher.top/privacy/",
+    "defaultPrompt": [
+      "Preflight these X handles and show the live cost before any payment.",
+      "Fetch recent posts from these X accounts and summarize the coverage.",
+      "Show me Xcatcher's free sample result and explain each field."
+    ],
+    "brandColor": "#58F29B",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

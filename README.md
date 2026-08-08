@@ -36,6 +36,27 @@ npx skills add lvpiggyqq/xcatcher-skill --list
 gh skill preview lvpiggyqq/xcatcher-skill xcatcher
 ```
 
+Gemini CLI extension (also enables the hosted MCP):
+
+```bash
+gemini extensions install https://github.com/lvpiggyqq/xcatcher-skill
+```
+
+GitHub Copilot CLI / VS Code agent plugin:
+
+```bash
+copilot plugin install lvpiggyqq/xcatcher-skill
+```
+
+To browse this repository as a Copilot plugin marketplace:
+
+```bash
+copilot plugin marketplace add lvpiggyqq/xcatcher-skill
+copilot plugin install xcatcher@xcatcher
+```
+
+Kiro can import the public repository as a custom power. Cursor, Codex, Cline, and other MCP clients can use the platform manifests in this repository or connect directly to `https://xcatcher.top/mcp/`. See [`POWER.md`](POWER.md) and [`llms-install.md`](llms-install.md) for host-specific onboarding.
+
 Canonical sources and releases:
 
 - <https://xcatcher.top/skills/xcatcher/SKILL.md>
@@ -69,6 +90,8 @@ The installable Skill is in [`skills/xcatcher`](skills/xcatcher):
 - `references/PAYMENTS.md`: x402 v2 payment and retry rules.
 - `scripts/xcatcher.py`: dependency-free REST fallback with free preflight/sample commands, environment-only credentials, and no payment-submission capability.
 
+The repository root also contains validated discovery manifests for Agent Plugins/Kiro (`plugin.json` + `mcp.json`), Gemini CLI (`gemini-extension.json`), GitHub Copilot/VS Code (`.mcp.json` + marketplace metadata), Cursor, and Codex.
+
 Remote MCP: <https://xcatcher.top/mcp/>
 
 Documentation: <https://xcatcher.top/docs/>
@@ -81,6 +104,10 @@ MCP Registry: <https://registry.modelcontextprotocol.io/v0.1/servers/io.github.l
 
 - The canonical site Skill and this repository's `skills/xcatcher/SKILL.md` are byte-identical at SHA-256 `ca521065d4a27968fe4b99a734978b122706003ce1e0547e70ce1b4c6e03baaf`.
 - An isolated Codex install through `npx skills add` has been tested together with the dependency-free live preflight helper.
+- Gemini CLI `0.54.4` has validated and installed this repository as an extension, discovering both the `xcatcher` MCP server and Agent Skill.
+- GitHub Copilot CLI `1.0.78` has installed it both directly and through its repository marketplace, discovering the Agent Skill.
+- Cline CLI `3.0.51` has installed the hosted Streamable HTTP server non-interactively from the configuration documented in `llms-install.md`, with no warnings.
+- A live, no-auth MCP smoke test confirms 17 tools plus healthy free `preflight_crawl` and `get_sample_result` calls without creating a task, quote, or payment.
 - The current canonical Skill has a public [AgentSkill.sh security score of 100/100](https://agentskill.sh/@xcatcher-top/xcatcher/security), with no findings across its 12 scanned threat categories.
 - The Remote MCP's free onboarding contract is continuously checked by the public [manifest smoke workflow](https://github.com/lvpiggyqq/xcatcher-mcp-manifest/actions/workflows/smoke.yml).
 

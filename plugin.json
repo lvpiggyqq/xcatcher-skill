@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "xcatcher",
+  "version": "1.0.0",
+  "description": "Fetch recent public X/Twitter posts by handle through a hosted Remote MCP, with free preflight and optional accountless x402 access.",
+  "author": {
+    "name": "Xcatcher",
+    "url": "https://xcatcher.top/"
+  },
+  "homepage": "https://xcatcher.top/integrations/agent-skills/",
+  "repository": "https://github.com/lvpiggyqq/xcatcher-skill",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "mcp",
+    "social-intelligence",
+    "twitter",
+    "x402"
+  ]
+}

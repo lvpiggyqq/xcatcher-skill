@@ -1,0 +1,33 @@
+{
+  "name": "xcatcher",
+  "owner": {
+    "name": "Xcatcher"
+  },
+  "metadata": {
+    "description": "Agent plugins for fetching recent public X/Twitter posts by handle.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "xcatcher",
+      "description": "Fetch recent public X/Twitter posts by handle through Remote MCP, with free preflight and optional x402 access.",
+      "version": "1.0.0",
+      "source": ".",
+      "author": {
+        "name": "Xcatcher",
+        "url": "https://xcatcher.top/"
+      },
+      "homepage": "https://xcatcher.top/integrations/agent-skills/",
+      "repository": "https://github.com/lvpiggyqq/xcatcher-skill",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "social-intelligence",
+        "twitter",
+        "x-posts",
+        "x402"
+      ],
+      "category": "Research"
+    }
+  ]
+}

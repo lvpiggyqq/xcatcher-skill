@@ -1,0 +1,36 @@
+{
+  "name": "xcatcher",
+  "displayName": "Xcatcher — Recent X Posts",
+  "description": "Fetch recent public X/Twitter posts by handle through Remote MCP, with free preflight and optional accountless x402 access.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Xcatcher"
+  },
+  "publisher": "Xcatcher",
+  "homepage": "https://xcatcher.top/integrations/agent-skills/",
+  "repository": "https://github.com/lvpiggyqq/xcatcher-skill",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "x",
+    "twitter",
+    "mcp",
+    "social-intelligence",
+    "x402"
+  ],
+  "category": "Data",
+  "tags": [
+    "mcp",
+    "research",
+    "social-media",
+    "twitter",
+    "x402"
+  ],
+  "skills": "skills/",
+  "mcpServers": {
+    "xcatcher": {
+      "type": "http",
+      "url": "https://xcatcher.top/mcp/"
+    }
+  }
+}
