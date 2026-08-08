@@ -45,14 +45,16 @@ jobs:
             exit 0
           fi
           skill_sha="$(sha256sum skills/xcatcher/SKILL.md | cut -d' ' -f1)"
+          release_notes="$(printf '%s\n' \
+            'Install with: npx skills add lvpiggyqq/xcatcher-skill --skill xcatcher' \
+            '' \
+            'Canonical Skill: https://xcatcher.top/SKILL.md' \
+            'Remote MCP: https://xcatcher.top/mcp/' \
+            "Skill SHA-256: $skill_sha" \
+            '' \
+            'This release adds free preflight and synthetic sample workflows, current structured-JSON guidance, and guarded accountless x402 v2 payment boundaries. No wallet secret or payment signature belongs in model-visible context.')"
           gh release create "$TAG" \
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
             --title "Xcatcher Agent Skill $TAG" \
-            --notes "Install with: npx skills add lvpiggyqq/xcatcher-skill --skill xcatcher
-
-Canonical Skill: https://xcatcher.top/SKILL.md
-Remote MCP: https://xcatcher.top/mcp/
-Skill SHA-256: $skill_sha
-
-This release adds free preflight and synthetic sample workflows, current structured-JSON guidance, and guarded accountless x402 v2 payment boundaries. No wallet secret or payment signature belongs in model-visible context."
+            --notes "$release_notes"
