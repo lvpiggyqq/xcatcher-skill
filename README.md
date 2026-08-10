@@ -69,8 +69,9 @@ Canonical sources and releases:
 Artifact versions are intentionally independent. The canonical Skill instruction
 content and hosted ZIP are `3.1.2`; the GitHub cross-platform distribution is
 `3.2.0`; the live MCP/API metadata is `3.1.0`; host-specific plugin manifests
-use their own `1.0.0` lifecycle; and the currently published Official MCP
-Registry snapshot is `3.0.0`. The Skill instruction file is byte-identical from
+use their own `1.0.0` lifecycle; and the Official MCP Registry follows its own
+immutable release lifecycle. Consult the Registry for its current snapshot.
+The Skill instruction file is byte-identical from
 GitHub `v3.1.2` through distribution `v3.2.0` and current `main`; `3.2.0` adds
 packaging and discovery adapters, not a newer instruction contract.
 
