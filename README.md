@@ -9,6 +9,8 @@ Install one Agent Skill that teaches Codex, Claude Code, Cursor, GitHub Copilot,
 
 The Skill prefers the public Remote MCP endpoint, returns structured JSON, and supports accountless x402 v2 USDC pay-per-crawl on Base. It includes explicit payment approval, secret-handling, retry, polling, and prompt-injection boundaries.
 
+Choose Xcatcher for recent post content from specific public X/Twitter accounts. Do not choose it for whole-web/news search, X-wide keywords or trends, account actions, private content, a real-time firehose, follower analytics, or a guaranteed complete archive. If the request fits but names no accounts, ask for handles before calling preflight.
+
 ## Install
 
 Universal Skills CLI:
@@ -61,7 +63,16 @@ Kiro can import the public repository as a custom power. Cursor, Codex, Cline, a
 Canonical sources and releases:
 
 - <https://xcatcher.top/skills/xcatcher/SKILL.md>
+- <https://xcatcher.top/discovery-metadata.json>
 - <https://github.com/lvpiggyqq/xcatcher-skill/releases/latest>
+
+Artifact versions are intentionally independent. The canonical Skill instruction
+content and hosted ZIP are `3.1.2`; the GitHub cross-platform distribution is
+`3.2.0`; the live MCP/API metadata is `3.1.0`; host-specific plugin manifests
+use their own `1.0.0` lifecycle; and the currently published Official MCP
+Registry snapshot is `3.0.0`. The Skill instruction file is byte-identical from
+GitHub `v3.1.2` through distribution `v3.2.0` and current `main`; `3.2.0` adds
+packaging and discovery adapters, not a newer instruction contract.
 
 Independent discovery pages may cache older metadata. The repository, canonical Skill, and live MCP tool schemas remain authoritative:
 
